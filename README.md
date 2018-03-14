@@ -27,3 +27,15 @@ $ docker run --rm -p 83:5000 blockchain
 ```
 
 ## Use
+* Check chain status using url `http://0.0.0.0/chain`
+
+* Mine a new block using url `http://0.0.0.0/mine`
+
+* Start a new transcation, use command
+```
+curl -X POST -H "Content-Type: application/json" -d '{
+ "sender": "8956C56C35E6B9E3F6E5096A11A06200",
+ "recipient": "F0004B1D688113006405C2EC3C268180",
+ "amount": 5
+}' "http://0.0.0.0/transactions/new"
+```
