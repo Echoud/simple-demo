@@ -31,6 +31,8 @@ $ docker run --rm -p 83:5000 blockchain
 
 * Mine a new block using url `http://0.0.0.0/mine`
 
+* List all accounts using url `http://0.0.0.0/accounts`
+
 * Start a new transcation, use command
 ```
 curl -X POST -H "Content-Type: application/json" -d '{
