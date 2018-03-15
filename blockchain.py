@@ -252,6 +252,21 @@ def full_chain():
     }
     return jsonify(response), 200
 
+@app.route('/accounts', methods=['GET'])
+def list_accounts():
+    accounts={}
+    for block in blockchain.chain:
+        for tx in block['transactions']:
+            receiver=tx['recipient']
+            if receiver in accounts:
+                accounts[receiver] = accounts[receiver] + tx['amount']
+            else:
+                accounts[receiver] = tx['amount']
+    response = {
+        'account': accounts,
+    }
+    return jsonify(response), 200
+
 
 @app.route('/nodes/register', methods=['POST'])
 def register_nodes():
