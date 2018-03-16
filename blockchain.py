@@ -199,6 +199,8 @@ node_identifier = str(uuid4()).replace('-', '')
 # Instantiate the Blockchain
 blockchain = Blockchain()
 
+#TODO: add timer to mine automatically
+#can config if skip empty block and mine interval
 
 @app.route('/mine', methods=['GET'])
 def mine():
