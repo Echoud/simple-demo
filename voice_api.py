@@ -19,18 +19,20 @@ import requests
 
 def invoke_ap():
     req_json= {
-    "channel_uuid": "XXX",
-    "service_uuid": "a5273c4b-1d39-4594-ae59-0748b317da2a",
-    "user_uuid": "USER_UUID",
-    "type": "text",
-    "data": {
-      "text": "北京今天天气怎么样"
-    },
-    "time": 1521261146704
+        "message": {
+            "channel_uuid": "XXX",
+            "service_uuid": "a5273c4b-1d39-4594-ae59-0748b317da2a",
+            "user_uuid": "USER_UUID",
+            "type": "text",
+            "data": {
+                "text": "北京今天天气怎么样"
+            },
+            "time": 1521261146704
+        },
+        "signature": "830e4c7a0fc3a46ef51db769c11a796cd82208391a54d34443f9a31ee65aa522"
     }
-    "signature": "830e4c7a0fc3a46ef51db769c11a796cd82208391a54d34443f9a31ee65aa522"
 
-    req = requests.post('http://api.0mzl.com/v2/message', json={"key": "value"})
+    req = requests.post('http://api.0mzl.com/v2/message', req_json)
 
 
 
