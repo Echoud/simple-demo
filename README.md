@@ -44,4 +44,4 @@ curl -X POST -H "Content-Type: application/json" -d '{
 
 ##Echocloud Voice Interface
 
-Document url `http://docs.0mzl.com/introduction/quick_start/`
+Document url `http://docs.0mzl.com/introduction/quick_start/`(http://docs.0mzl.com/introduction/quick_start/)
