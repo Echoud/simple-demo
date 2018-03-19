@@ -45,14 +45,12 @@ def invoke_api():
         "signature": sig
     }
     url = 'http://api.0mzl.com/v2/message'
-    headers = {'content-type': 'application/json'}
+    headers = {'content-type': 'application/json; charset=utf-8'}
 
     print req_json
-    print "\nDUMPS\n"
-    print json.dumps(req_json)
-    req = requests.post(url, json.dumps(req_json), headers)
-    print req.status_code
-    print req.content
+    print "\nRESPONSE:\n"
+    req = requests.post(url, data=json.dumps(req_json), headers=headers)
+    print req.status_code, req.content
 
 
 
